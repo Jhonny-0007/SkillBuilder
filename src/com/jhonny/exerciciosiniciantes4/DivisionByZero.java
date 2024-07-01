@@ -2,29 +2,24 @@ package com.jhonny.exerciciosiniciantes4;
 
 import java.util.Scanner;
 
-public class WeightedAverage {
+public class DivisionByZero {
 
 	public static void main(String[] args) {
-
 		Scanner scanner = new Scanner(System.in);
 
-		
 		int quantity = scanner.nextInt();
-		double array [] = new double[quantity];
-
 
 		for (int i = 0; i < quantity; i++) {
 			double number = scanner.nextDouble();
 			double number2 = scanner.nextDouble();
-			double number3 = scanner.nextDouble();
 
-			
-			double sum = (number * 2.0 + number2 * 3.0 + number3 * 5) / 10;
-			array[i] = sum;
+			double division = number / number2;
+			if (number2 == 0) {
+				System.out.println("divisao impossivel");
+			} else {
+				System.out.printf("%.1f%n", division);
+			}
 
-		}
-		for (double a : array) {
-			System.out.printf("%.1f%n",a);
 		}
 
 		scanner.close();
