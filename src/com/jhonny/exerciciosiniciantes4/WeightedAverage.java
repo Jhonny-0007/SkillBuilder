@@ -8,23 +8,20 @@ public class WeightedAverage {
 
 		Scanner scanner = new Scanner(System.in);
 
-		
 		int quantity = scanner.nextInt();
-		double array [] = new double[quantity];
-
+		double array[] = new double[quantity];
 
 		for (int i = 0; i < quantity; i++) {
 			double number = scanner.nextDouble();
 			double number2 = scanner.nextDouble();
 			double number3 = scanner.nextDouble();
 
-			
 			double sum = (number * 2.0 + number2 * 3.0 + number3 * 5) / 10;
 			array[i] = sum;
 
 		}
 		for (double a : array) {
-			System.out.printf("%.1f%n",a);
+			System.out.printf("%.1f%n", a);
 		}
 
 		scanner.close();
